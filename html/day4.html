@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*初始化padding和margin*/
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			/*a标签默认下滑线,去掉下划线*/
+			a{
+				text-decoration: none;
+			
+			}
+			/*设置顶部(头)背景颜色 高宽*/
+			.tou{
+				background: #F7F7F7;
+				width:580px ;
+				height:-1px;
+				padding: 17px;
+			}
+			/*设置span标签内元素的字体大小 字体颜色,左边距(设置了没用)*/
+			span{
+				font-size: 5px;
+				color: #808080;
+				margin-left:20px;
+			}
+			/*设置图片的大小*/
+			img{
+				width: 23px;
+				height: 12px;
+				align-self: center;
+				
+			}
+			/*设置搜索div的高宽和左浮动*/
+			.sousuo{
+				width: 68px;
+				height: 20px;
+				float: left;
+				
+			}
+			/*设置购物车div宽 和左浮动*/
+			.gouwuche{
+				width: 130px;
+				height: 20px;
+				margin-left: -80px;
+				
+			}
+			/*设置搜素和购物车div的背景颜色,字体中心对齐*/
+			.sousuo,.gouwuche{
+				background: #B81B22;
+				text-align: center;
+				
+			}
+			/*设置购物车和搜素div中a标签中的文字颜色*/
+			.ziti{
+					color: white;
+			}
+			/*设置搜索框左浮动*/
+			.sousuokuang{
+				float: left;
+				margin-left: 250px;
+				
+			}
+			.mybody{
+				margin-top: 30px;
+				margin-left: 300px;
+			}
+			.img1{
+				margin-right: 0px;
+			}
+			.gonggao{
+				margin-left: -5px;
+			}
+			.remen{
+					margin-top: -20px;
+					margin-left: -60px;
+					
+					width: 500px;
+			}
+			.remen span,a{
+				margin-left:5px;
+				color: #ccc;
+				
+			}
+			.xiaoguo{
+				background:white;
+				margin-top: -20px;
+				padding-left: -30px;
+				text-align: center;
+				width: 500px;
+				color:black; 
+				display: none;
+				
+			}
+		</style>
+		<script>
+			window.onload=function()
+			{
+				var gouwuche=document.getElementById("gouwuche");
+				var xiaoguo=document.getElementById("xiaoguo");
+				var che=document.getElementById("che");
+				var tu=document.getElementById("tu");
+				var timer=null;
+			che.onmouseover=tu.onmouseover=gouwuche.onmouseover=function()
+				{
+						xiaoguo.style.display="block";
+					
+				};
+				che.onmouseout=tu.onmouseout=gouwuche.onmouseout=function()
+				{
+					setTimeout(function()
+					{xiaoguo.style.display="none";
+						
+					},500);
+						
+						
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<div class="zong" align="center">
+		<div class="tou">
+			<span>您好,欢迎光临凡客诚品!</span>
+			<span><a href="https://login.vancl.com/login/login.aspx?http%3A%2F%2Fwww.vancl.com%2F">登陆</a></span>
+			<span>|</span>
+			<span><a href="https://login.vancl.com/login/reg.aspx?http%3A%2F%2Fwww.vancl.com%2F">注册</a></span>
+			<span>我的订单</span>
+			<img class="img1" src="./img/xiaotubiao1.png" />
+			<span class="gonggao"><a href="http://catalog.vancl.com/zhuanti/tg_20100510.html">网站公告</a></span>
+			<img src="img/xiaotubiao2 .png"/>
+			<img src="img/xiaotubiao3.png" />
+		</div>
+		<div class="mybody">
+		<input type="text" class="sousuokuang"  />
+		<div class="sousuo">
+			<a class="ziti" href="#">搜索</a>
+		</div>
+		<div class="gouwuche" id="gouwuche" >
+			<img id="tu" src="img/xiaotubiao4.png" />
+			<a class="ziti" href="#" id="che">购物车(0)</a>
+		</div>
+		<br />
+		<div class="xiaoguo" id="xiaoguo">
+			<span>您的购物车里没有商品</span>
+		</div>
+		</div>
+		<br />
+		<div class="remen">
+		<span>热门搜索:</span>
+		<span><a href="http://s.vancl.com/search?k=%E5%85%8D%E7%83%AB%E8%A1%AC%E8%A1%AB&orig=3#ref=hp-hp-classhotsearch-1_1-v:n">免烫衬衫</a></span>
+		<span><a href="http://s.vancl.com/search?k=%E6%B0%B4%E6%9F%94%E6%A3%89&orig=3#ref=hp-hp-classhotsearch-1_2-v:n|hp-hp-classhotsearch-1_1-v:n">水柔棉</a></span>
+		<span><a href="http://s.vancl.com/search?k=%E7%86%8A%E6%9C%AC%E7%86%8A&orig=3#ref=hp-hp-classhotsearch-1_3-v:n|hp-hp-classhotsearch-1_2-v:n|hp-hp-classhotsearch-1_1-v:n">熊本熊</a></span>
+		<span><a href="http://s.vancl.com/search?k=%E9%BA%BB%E8%A1%AC%E8%A1%AB&orig=3#ref=hp-hp-classhotsearch-1_4-v:n|hp-hp-classhotsearch-1_3-v:n|hp-hp-classhotsearch-1_2-v:n|hp-hp-classhotsearch-1_1-v:n">麻衬衫</a></span>
+		<span><a href="http://s.vancl.com/search?k=%E5%B8%86%E5%B8%83%E9%9E%8B&orig=3#ref=hp-hp-classhotsearch-1_5-v:n|hp-hp-classhotsearch-1_4-v:n|hp-hp-classhotsearch-1_3-v:n|hp-hp-classhotsearch-1_2-v:n|hp-hp-classhotsearch-1_1-v:n">帆布鞋</a></span>
+		<span><a href="http://s.vancl.com/search?k=%E8%BF%90%E5%8A%A8%E6%88%B7%E5%A4%96&orig=3#ref=hp-hp-classhotsearch-1_6-v:n|hp-hp-classhotsearch-1_5-v:n|hp-hp-classhotsearch-1_4-v:n|hp-hp-classhotsearch-1_3-v:n|hp-hp-classhotsearch-1_2-v:n|hp-hp-classhotsearch-1_1-v:n">运动户外</a></span>
+		<span><a href="http://s.vancl.com/search?k=%E5%AE%B6%E5%B1%85&orig=3#ref=hp-hp-classhotsearch-1_7-v:n|hp-hp-classhotsearch-1_6-v:n|hp-hp-classhotsearch-1_5-v:n|hp-hp-classhotsearch-1_4-v:n|hp-hp-classhotsearch-1_3-v:n|hp-hp-classhotsearch-1_2-v:n|hp-hp-classhotsearch-1_1-v:n">家居</a></span>
+		</div>
+	</div>
+	</body>
+</html>

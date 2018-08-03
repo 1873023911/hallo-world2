@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+//			window.onload = function() {
+//				var btn1 = document.getElementById("btn1");
+//				var ul1 = document.getElementById("ul1");
+//				var ta = document.getElementById("ta");
+//
+//				btn1.onClick = function() {
+//					var lin = document.createElement("li");
+//					var ali = ul1.getElementsByTagName("li");
+//					lin.innerHTML = ta.value;
+//					alert(lin.innerHTML);
+//					if(ali.length > 0) {
+//						ul1.insertBefore(lin, ali[0]);
+//					} else {
+//						ul1.appendChild(lin);
+//					}
+//
+//				}
+//			}
+			
+			function change() {
+				var btn1 = document.getElementById("btn1");
+				var ul1 = document.getElementById("ul1");
+				var ta = document.getElementById("ta");
+				var lin = document.createElement("li");
+					var ali = ul1.getElementsByTagName("li");
+					lin.innerHTML = ta.value;
+					if(ali.length > 0) {
+						ul1.insertBefore(lin, ali[0]);
+					} else {
+						ul1.appendChild(lin);
+					}
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="text" class="pinglun" placeholder="请留下你的留言" id="ta" />
+		<input type="button" onClick="change()" id="btn1" value="发送" />
+
+		<ul id="ul1"> </ul>
+	</body>
+
+</html>
